@@ -36,14 +36,7 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function Projectv1() {
-    // const [expanded, setExpanded] = React.useState(false);
-
     const [expanded, setExpanded] = React.useState([false, false, false]);
-
-    // const handleExpandClick = () => {
-    //     setExpanded(!expanded);
-    // };
-
     const handleExpandClick = (index) => {
         setExpanded((prevExpanded) => {
             const newExpanded = [...prevExpanded];
@@ -113,7 +106,6 @@ export default function Projectv1() {
                     <img src={SeaBackground} className='background' alt='seattle'></img>
                 </header>
             </div>
-
             {/* -----------------project showcase -------------- */}
             <div className='body-text'>
                 <div className='cool-text'>Projects</div>
@@ -297,7 +289,7 @@ export default function Projectv1() {
                         <div className='body-text'>
                             <h1 className='cool-text'>Full Stack Developer</h1>
                         </div>
-                        <p><strong>Coding Dojo graduate - April 2023 </strong> <a href="https://app.diplomasafe.com/en-US/diploma/db153694d63e82f40c58882139efca9f8e4d936ff" target='_blank'>- Certificate</a></p>
+                        <p><strong>Coding Dojo graduate - April 2023 </strong> <a href="https://app.diplomasafe.com/en-US/diploma/db153694d63e82f40c58882139efca9f8e4d936ff" target='_blank' rel="noopener noreferrer">- Certificate</a></p>
                         <p>Passionate software developer eager to expand knowledge and embrace emerging technologies.</p>
                         <p>Dynamic, agile, and quick learner with an adaptable mindset.</p>
                         <p>Value collaborative team environments and thrive in agile Scrum methodologies, leveraging CI/CD pipelines on GitHub.</p>
