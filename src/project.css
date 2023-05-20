@@ -1,0 +1,55 @@
+.main {
+  margin-top: -50px;
+}
+
+.projectCard {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.wrapper {
+  height: 100vh;
+  overflow: hidden;
+  perspective: 10px;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  z-index: -1;
+}
+
+.background {
+  transform: translateZ(-10px) scale(2);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.title {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 0 5px black;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.chip-stack {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.chip-stack .MuiChip-root {
+  background-color: #fff;
+  color: #333;
+}
