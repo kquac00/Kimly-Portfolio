@@ -136,7 +136,10 @@ export default function Projectv1() {
                     </a>
                     <CardContent>
                         <Typography variant="body2" color="text.secondary">
-                            •	Worked with a team using Agile and Scrum methodology to create a React-based front end with MongoDB, Express, and Mongoose APIs and MySQL database
+                            <li>Worked with a team using Agile and Scrum methodology to create a React-based front end with MongoDB and Mongoose APIs and MySQL database</li>
+                            <li>Implemented Login/Registration using JWT and Bcrypt for authentication and authorization</li>
+                            <li>React, a JavaScript library for building user interfaces.</li>
+                            <li>React DOM for rendering React components into the DOM.</li>
                         </Typography>
                     </CardContent>
                     <CardActions disableSpacing>
@@ -161,10 +164,15 @@ export default function Projectv1() {
                     <Collapse in={expanded[0]} timeout="auto" unmountOnExit>
                         <CardContent>
                             <Typography paragraph>
-                                •	Implemented Login/Registration using JWT and Bcrypt for authentication and authorization
+                                <li>React Scripts for starting the development server, building the project, running tests, and ejecting from Create React App.</li>
+                                <li>Emotion is a CSS-in-JS library used for styling React components.</li>
+                                <li>Axios to used for making HTTP requests from the client-side.</li>
                             </Typography>
                             <Typography paragraph>
-                                •	Styled the project using Material-UI and bootstrap.
+                                <li>Express</li>
+                                <li>MUI (Material-UI)library</li>
+                                <li>React Router for declarative routing in the application.</li>
+                                <li>React Router Bootstrap to use components for routing purposes.</li>
                             </Typography>
                         </CardContent>
                     </Collapse>
@@ -194,7 +202,9 @@ export default function Projectv1() {
                     </a>
                     <CardContent>
                         <Typography variant="body2" color="text.secondary">
-                            •	Collaborated with a team using Agile and Scrum methodology to create a React-based front end and Spring Java-based back end with a MySQL database
+                            <li>Collaborated with a team using Agile and Scrum methodology to create a React-based front end and Spring Java-based back end with a MySQL database</li>
+                            <li>Technologies used in React, axios, bootstrap, React DOM, Material Ui carousel</li>
+                            <li>emotion styled, emotion react, emotion, React Toastify, cors</li>
                         </Typography>
                     </CardContent>
                     <CardActions disableSpacing>
@@ -241,15 +251,20 @@ export default function Projectv1() {
                         title="Kimly's portfolio"
                         subheader="May 15, 2023"
                     />
-                    <CardMedia
-                        component="img"
-                        height="194"
-                        image={portfolioImage}
-                        alt="Kimly's portfolio"
-                    />
+                    <a href='https://646950e879c84500074c5b7f--stellar-beignet-d51f23.netlify.app/' target='_blank' rel="noopener noreferrer">
+                        <CardMedia
+                            component="img"
+                            height="194"
+                            image={portfolioImage}
+                            alt="Kimly's portfolio"
+                        />
+                    </a>
                     <CardContent>
                         <Typography variant="body2" color="text.secondary">
-                            Need content here...
+                            <li>Solo React project.</li>
+                            <li>React Router for declarative routing in the application.</li>
+                            <li>React DOM for rendering React components into the DOM.</li>
+                            <li>React Scripts for starting the development server, building the project, running tests, and ejecting from Create React App.</li>
                         </Typography>
                     </CardContent>
                     <CardActions disableSpacing>
@@ -271,10 +286,14 @@ export default function Projectv1() {
                     <Collapse in={expanded[2]} timeout="auto" unmountOnExit>
                         <CardContent>
                             <Typography paragraph>
-
+                                <li>Bootstrap is used for styling and layout of the application.</li>
+                                <li>EmailJS for sending emails from the browser.</li>
+                                <li>React Toastify for displaying toast notifications in the application.</li>
                             </Typography>
                             <Typography paragraph>
-
+                                <li>MUI (Material-UI) using its icons and UI components.</li>
+                                <li>Styled Components, CSS-in-JS library used for styling React components.</li>
+                                <li>Fontsource Roboto for loading and using the Roboto font in the application.</li>
                             </Typography>
                         </CardContent>
                     </Collapse>
