@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import CardHeader from '@mui/material/CardHeader';
@@ -21,6 +21,7 @@ import SeaBackground from '../static/images/Seattlebg.jpg'
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import TeamImage from "../static/images/teamwork.jpg"
+import Career from "../static/images/new_career.jpg"
 import '../biography.css';
 import '../project.css'
 
@@ -36,6 +37,25 @@ const ExpandMore = styled((props) => {
 }));
 
 export default function Projectv1() {
+    const [text, setText] = useState("");
+    const fullText = "I  am motivated to contribute to the world of technology by leveraging coding skills to create innovative solutions that improve lives, streamline processes, and make a positive impact on our society.";
+
+    useEffect(() => {
+        let index = 0;
+        const intervalId = setInterval(() => {
+            setText((prevText) => prevText + fullText.charAt(index));
+            index++;
+
+            if (index === fullText.length) {
+                clearInterval(intervalId);
+            }
+        }, 50);
+
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, []);
+
     const [expanded, setExpanded] = React.useState([false, false, false]);
     const handleExpandClick = (index) => {
         setExpanded((prevExpanded) => {
@@ -44,12 +64,27 @@ export default function Projectv1() {
             return newExpanded;
         });
     }
+
     return (
         <div className='main'>
+            <div className="wrapper">
+
+                <img src={Career} alt='openDoor' className='background'></img>
+                <div className='text' style={{ fontFamily: 'Raleway, sans-serif', fontSize: '20px' }}>
+                    <h3>Career Journey: Embracing Passion and Pursuing Technology</h3>
+                    <p>Upon graduating from high school, I enrolled in community college to pursue a career in the world of technology, but it didn't provide the direction I sought. Circumstances led me to a warehouse job where I advanced to a management position, providing financial stability for my family. However, it didn't align with my true interests and aspirations.</p>
+                    <p>When the COVID-19 pandemic hit, I saw it as an opportunity to reevaluate my life. I made the courageous decision to quit my job and embrace the chance to pursue my passion for technology. I realized that becoming a software developer encompassed all the traits I value: creativity, problem-solving, and continuous learning. This leap of faith opened doors for me to explore and excel in an area that truly ignites my passion.</p>
+                    <p><strong>{text}</strong></p>
+                </div>
+
+            </div>
             <div className='wrapper'>
                 <header>
+
                     <div>
-                        <h1 className='title'>Technologies</h1>
+                        <div className='body-text'>
+                            <h1 className='cool-text' style={{ fontSize: "80px" }}>Technologies</h1>
+                        </div>
                         <div className='chip-stack'>
                             <Stack direction="row" spacing={1}>
                                 <Chip label="Java" />
@@ -96,19 +131,18 @@ export default function Projectv1() {
                             <Stack direction="row" spacing={1}>
                                 <Chip label="Agile development Life Cycle" />
                                 <Chip label="Scrum Methology" />
-                                <Chip label="CI/CD Pipeline" />
                                 <Chip label="Toastify" />
                                 <Chip label="JWT" />
                                 <Chip label="Bcrypt" />
                             </Stack>
                         </div>
                     </div>
-                    <img src={SeaBackground} className='background' alt='seattle'></img>
+                    <img src={SeaBackground} className='foreground' alt='seattle'></img>
                 </header>
             </div>
             {/* -----------------project showcase -------------- */}
-            <div className='body-text'>
-                <div className='cool-text'>Projects</div>
+            <div>
+                <h1 style={{ fontFamily: "Roboto", textAlign: "center" }}>Projects</h1>
             </div>
             <div className='projectCard'>
                 <Card sx={{ maxWidth: 345 }}>
@@ -311,7 +345,7 @@ export default function Projectv1() {
                         <p><strong>Coding Dojo graduate - April 2023 </strong> <a href="https://app.diplomasafe.com/en-US/diploma/db153694d63e82f40c58882139efca9f8e4d936ff" target='_blank' rel="noopener noreferrer">- Certificate</a></p>
                         <p>Passionate software developer eager to expand knowledge and embrace emerging technologies.</p>
                         <p>Dynamic, agile, and quick learner with an adaptable mindset.</p>
-                        <p>Value collaborative team environments and thrive in agile Scrum methodologies, leveraging CI/CD pipelines on GitHub.</p>
+                        <p>Value collaborative team environments and thrive in agile Scrum methodologies.</p>
                         <p>Successfully completed an intensive 3.5-month bootcamp, dedicating over 600 hours to coding mastery.</p>
                         <p>I believe in continuous learning and adaptability, coupled with strong problem-solving skills, empower software developers to stay up to date with evolving technologies, effectively tackle complex challenges, and embrace new programming languages and frameworks. By fostering a collaborative mindset and demonstrating a commitment to continuous improvement, developers not only excel in teamwork and career growth but also contribute to innovative projects and thrive in a dynamic and ever-changing industry.</p>
                     </section>

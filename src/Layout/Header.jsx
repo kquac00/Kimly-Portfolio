@@ -32,7 +32,7 @@ function DrawerAppBar(props) {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <Typography variant="h6" sx={{ my: 2 }}>
-                Kimly Quac
+                <a style={{ textDecoration: "none" }} href='/'>Kimly Quac</a>
             </Typography>
             <Divider />
             <List>
@@ -97,6 +97,7 @@ function DrawerAppBar(props) {
                         <Link className='links' to="/hobby" style={{ marginRight: '10px' }}>Hobby</Link>
                         <Link className='links' to="/history" style={{ marginRight: '10px' }}>History</Link>
                         <Link className='links' to="/contact" style={{ marginRight: '10px' }}>Contact</Link>
+                        <Link className='links, btn btn-success' to="/" style={{ marginRight: '10px' }}>Home</Link>
                     </Box>
                 </Toolbar>
             </AppBar>
