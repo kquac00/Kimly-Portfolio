@@ -52,15 +52,15 @@ section {
   background-position: center;
   -webkit-background-clip: text;
   color: transparent;
-  font-size: 0.5em;
+  font-size: 80px;
 }
 
 p {
   font-size: 1rem;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 360px) {
   .cool-text {
-    font-size: 1rem;
+    font-size: 60px;
   }
 }

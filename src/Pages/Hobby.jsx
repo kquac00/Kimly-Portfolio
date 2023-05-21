@@ -6,7 +6,7 @@ import ImageListItemBar from '@mui/material/ImageListItemBar';
 const Hobby = () => {
     return (
         <>
-            <h1 style={{ color: 'lightgray', fontFamily: 'Arial', fontSize: '60px', textAlign: "center" }}>Some of my favorite Hobbies</h1>
+            <h1 style={{ color: 'skyblue', fontFamily: 'sans-serif', fontSize: '60px', textAlign: "center" }}>Favorite Hobbies</h1>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
                 <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
                     {itemData.map((item) => (

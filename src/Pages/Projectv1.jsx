@@ -71,22 +71,20 @@ export default function Projectv1() {
 
                 <img src={Career} alt='openDoor' className='background'></img>
                 <div className='text' style={{ fontFamily: 'Raleway, sans-serif', fontSize: '20px' }}>
-                    <h3>Career Journey: Embracing Passion and Pursuing Technology</h3>
+                    <h5>Career Journey: Embracing Passion and Pursuing Technology</h5>
                     <p>Upon graduating from high school, I enrolled in community college to pursue a career in the world of technology, but it didn't provide the direction I sought. Circumstances led me to a warehouse job where I advanced to a management position, providing financial stability for my family. However, it didn't align with my true interests and aspirations.</p>
                     <p>When the COVID-19 pandemic hit, I saw it as an opportunity to reevaluate my life. I made the courageous decision to quit my job and embrace the chance to pursue my passion for technology. I realized that becoming a software developer encompassed all the traits I value: creativity, problem-solving, and continuous learning. This leap of faith opened doors for me to explore and excel in an area that truly ignites my passion.</p>
                     <p><strong>{text}</strong></p>
                 </div>
-
             </div>
             <div className='wrapper'>
                 <header>
-
                     <div>
                         <div className='body-text'>
-                            <h1 className='cool-text' style={{ fontSize: "80px" }}>Technologies</h1>
+                            <h1 className='cool-text'>Technologies</h1>
                         </div>
                         <div className='chip-stack'>
-                            <Stack direction="row" spacing={1}>
+                            <Stack direction="row" spacing={1} className='chip-container'>
                                 <Chip label="Java" />
                                 <Chip label="JavaScript" />
                                 <Chip label="ES6" />
@@ -98,7 +96,7 @@ export default function Projectv1() {
                             </Stack>
                         </div>
                         <div className='chip-stack'>
-                            <Stack direction="row" spacing={1}>
+                            <Stack direction="row" spacing={1} className='chip-container'>
                                 <Chip label="VS code" />
                                 <Chip label="Flask" />
                                 <Chip label="Jinja2" />
@@ -114,7 +112,7 @@ export default function Projectv1() {
                             </Stack>
                         </div>
                         <div className='chip-stack'>
-                            <Stack direction="row" spacing={1}>
+                            <Stack direction="row" spacing={1} className='chip-container'>
                                 <Chip label="MongoDB" />
                                 <Chip label="Mongoose" />
                                 <Chip label="AJAX" />
@@ -128,7 +126,7 @@ export default function Projectv1() {
                             </Stack>
                         </div>
                         <div className='chip-stack'>
-                            <Stack direction="row" spacing={1}>
+                            <Stack direction="row" spacing={1} className='chip-container'>
                                 <Chip label="Agile development Life Cycle" />
                                 <Chip label="Scrum Methology" />
                                 <Chip label="Toastify" />
@@ -336,9 +334,7 @@ export default function Projectv1() {
             <div className='wrapper'>
                 <header>
                     <img className='background' src={TeamImage} alt='team_image'></img>
-
                     <section>
-
                         <div className='body-text'>
                             <h1 className='cool-text'>Full Stack Developer</h1>
                         </div>

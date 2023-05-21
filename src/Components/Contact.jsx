@@ -5,53 +5,53 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Contact = () => {
-    const form = useRef();
+  const form = useRef();
 
-    const sendEmail = (e) => {
-        e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-        emailjs
-            .sendForm(
-                "service_to6i1vd",
-                "template_x1sm6m7",
-                form.current,
-                "BeyvC75jFZeDI6z7k"
-            )
-            .then(
-                (result) => {
-                    console.log(result.text);
-                    console.log("message sent");
-                },
-                (error) => {
-                    console.log(error.text);
-                }
-            );
-    };
+    emailjs
+      .sendForm(
+        "service_to6i1vd",
+        "template_x1sm6m7",
+        form.current,
+        "BeyvC75jFZeDI6z7k"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          console.log("message sent");
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
 
-    const handleSuccess = () => {
-        toast.success("Thank you! E-mail sent succesfully!");
-        setTimeout(() => {
-            window.location.replace('/');
-        }, 4000);
-    }
+  const handleSuccess = () => {
+    toast.success("Thank you! E-mail sent succesfully!");
+    setTimeout(() => {
+      window.location.replace('/');
+    }, 4000);
+  }
 
-    return (
-        <div className="marginTB">
-            <StyledContactForm>
-                <p>Send me an e-mail - fill out the form below </p>
-                <form ref={form} onSubmit={sendEmail}>
-                    <label>Name</label>
-                    <input type="text" name="user_name" />
-                    <label>Email</label>
-                    <input type="email" name="user_email" />
-                    <label>Message</label>
-                    <textarea name="message" />
-                    <input type="submit" value="Send" onClick={handleSuccess} />
-                    <ToastContainer />
-                </form>
-            </StyledContactForm>
-        </div>
-    )
+  return (
+    <div className="marginTB">
+      <StyledContactForm>
+        <p>Give me an opportunity to be part of something great.</p>
+        <form ref={form} onSubmit={sendEmail}>
+          <label>Name</label>
+          <input type="text" name="user_name" />
+          <label>Email</label>
+          <input type="email" name="user_email" />
+          <label>Message</label>
+          <textarea name="message" />
+          <input type="submit" value="Send" onClick={handleSuccess} />
+          <ToastContainer />
+        </form>
+      </StyledContactForm>
+    </div>
+  )
 }
 
 export default Contact

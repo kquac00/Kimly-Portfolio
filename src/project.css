@@ -2,12 +2,12 @@
   margin-top: -50px;
 }
 .text {
-  margin-top: 20px;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 20px;
+  font-family: sans-serif;
 }
 
 .projectCard {
@@ -55,9 +55,15 @@ header {
   display: flex;
   justify-content: center;
   font-weight: bold;
+  flex-wrap: wrap;
 }
 
 .chip-stack .MuiChip-root {
   background-color: #fff;
   color: #333;
+}
+
+.chip-container {
+  justify-content: center;
+  flex-wrap: wrap;
 }
