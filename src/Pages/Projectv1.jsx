@@ -22,7 +22,7 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import TeamImage from "../static/images/teamwork.jpg"
 import Career from "../static/images/new_career.jpg"
-import '../biography.css';
+import { Link } from 'react-router-dom';
 import '../project.css'
 
 const ExpandMore = styled((props) => {
@@ -68,9 +68,8 @@ export default function Projectv1() {
     return (
         <div className='main'>
             <div className="wrapper">
-
                 <img src={Career} alt='openDoor' className='background'></img>
-                <div className='text' style={{ fontFamily: 'Raleway, sans-serif', fontSize: '20px' }}>
+                <div className='text' style={{ fontFamily: 'Raleway, sans-serif' }}>
                     <h5>Career Journey: Embracing Passion and Pursuing Technology</h5>
                     <p>Upon graduating from high school, I enrolled in community college to pursue a career in the world of technology, but it didn't provide the direction I sought. Circumstances led me to a warehouse job where I advanced to a management position, providing financial stability for my family. However, it didn't align with my true interests and aspirations.</p>
                     <p>When the COVID-19 pandemic hit, I saw it as an opportunity to reevaluate my life. I made the courageous decision to quit my job and embrace the chance to pursue my passion for technology. I realized that becoming a software developer encompassed all the traits I value: creativity, problem-solving, and continuous learning. This leap of faith opened doors for me to explore and excel in an area that truly ignites my passion.</p>
@@ -79,13 +78,13 @@ export default function Projectv1() {
             </div>
             <div className='wrapper'>
                 <header>
-                    <div>
+                    <div className='tech-display'>
                         <div className='body-text'>
                             <h1 className='cool-text'>Technologies</h1>
                         </div>
                         <div className='chip-stack'>
                             <Stack direction="row" spacing={1} className='chip-container'>
-                                <Chip label="Java" />
+                                <Chip label="Java" className='chip' />
                                 <Chip label="JavaScript" />
                                 <Chip label="ES6" />
                                 <Chip label="Node JS" />
@@ -103,12 +102,17 @@ export default function Projectv1() {
                                 <Chip label="Spring Boot" />
                                 <Chip label="Spring Tool Suite 4" />
                                 <Chip label="JQuery" />
+                            </Stack>
+                        </div>
+                        <div className='chip-stack'>
+                            <Stack direction="row" spacing={1} className='chip-container'>
                                 <Chip label="React" />
                                 <Chip label="Express" />
                                 <Chip label="React Native" />
                                 <Chip label="Bootstrap" />
                                 <Chip label="Material-UI" />
                                 <Chip label="MySQL Workbench" />
+                                <Chip label="OOP" />
                             </Stack>
                         </div>
                         <div className='chip-stack'>
@@ -122,7 +126,7 @@ export default function Projectv1() {
                                 <Chip label="Socket.io" />
                                 <Chip label="AWS" />
                                 <Chip label="GitHub" />
-                                <Chip label="OOP" />
+
                             </Stack>
                         </div>
                         <div className='chip-stack'>
@@ -283,14 +287,14 @@ export default function Projectv1() {
                         title="Kimly's portfolio"
                         subheader="May 15, 2023"
                     />
-                    <a href='https://646950e879c84500074c5b7f--stellar-beignet-d51f23.netlify.app/' target='_blank' rel="noopener noreferrer">
+                    <Link to="/">
                         <CardMedia
                             component="img"
                             height="194"
                             image={portfolioImage}
                             alt="Kimly's portfolio"
                         />
-                    </a>
+                    </Link>
                     <CardContent>
                         <Typography variant="body2" color="text.secondary">
                             <li>Solo React project.</li>
@@ -334,16 +338,18 @@ export default function Projectv1() {
             <div className='wrapper'>
                 <header>
                     <img className='background' src={TeamImage} alt='team_image'></img>
-                    <section>
+                    <section className='visionMain'>
                         <div className='body-text'>
-                            <h1 className='cool-text'>Full Stack Developer</h1>
+                            <h5 className='cool-text'>Full Stack Developer</h5>
                         </div>
-                        <p><strong>Coding Dojo graduate - April 2023 </strong> <a href="https://app.diplomasafe.com/en-US/diploma/db153694d63e82f40c58882139efca9f8e4d936ff" target='_blank' rel="noopener noreferrer">- Certificate</a></p>
-                        <p>Passionate software developer eager to expand knowledge and embrace emerging technologies.</p>
-                        <p>Dynamic, agile, and quick learner with an adaptable mindset.</p>
-                        <p>Value collaborative team environments and thrive in agile Scrum methodologies.</p>
-                        <p>Successfully completed an intensive 3.5-month bootcamp, dedicating over 600 hours to coding mastery.</p>
-                        <p>I believe in continuous learning and adaptability, coupled with strong problem-solving skills, empower software developers to stay up to date with evolving technologies, effectively tackle complex challenges, and embrace new programming languages and frameworks. By fostering a collaborative mindset and demonstrating a commitment to continuous improvement, developers not only excel in teamwork and career growth but also contribute to innovative projects and thrive in a dynamic and ever-changing industry.</p>
+                        <div className='vision'>
+                            <p><strong>Coding Dojo graduate - April 2023 </strong> <a href="https://app.diplomasafe.com/en-US/diploma/db153694d63e82f40c58882139efca9f8e4d936ff" target='_blank' rel="noopener noreferrer">- Certificate</a></p>
+                            <p>Passionate software developer eager to expand knowledge and embrace emerging technologies.</p>
+                            <p>Dynamic, agile, and quick learner with an adaptable mindset.</p>
+                            <p>Value collaborative team environments and thrive in agile Scrum methodologies.</p>
+                            <p>Successfully completed an intensive 3.5-month bootcamp, dedicating over 600 hours to coding mastery.</p>
+                            <p style={{ color: "green" }}><strong>I believe in continuous learning and adaptability, coupled with strong problem-solving skills, empower software developers to stay up to date with evolving technologies, effectively tackle complex challenges, and embrace new programming languages and frameworks. By fostering a collaborative mindset and demonstrating a commitment to continuous improvement, developers not only excel in teamwork and career growth but also contribute to innovative projects and thrive in a dynamic and ever-changing industry.</strong></p>
+                        </div>
                     </section>
                 </header>
             </div>

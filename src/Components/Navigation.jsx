@@ -15,15 +15,18 @@ const Navigation = () => {
 
         <div className="carousel">
             <div className='carouselInner' style={{ backgroundImage: `url(${images[currImg].img})` }}>
-                <div className='left' onClick={() => { currImg > 0 && setCurrImg(currImg - 1); }}>
-                    <ArrowBackIosIcon style={{ fontSize: 50 }} /></div>
+
+                <div className='left' onClick={() => setCurrImg((currImg - 1 + images.length) % images.length)}>
+                    <ArrowBackIosIcon style={{ fontSize: 50 }} />
+                </div>
                 <div className='center'>
 
                     <h1>{images[currImg].title}</h1>
 
                 </div>
-                <div className='right' onClick={() => { currImg < images.length - 1 && setCurrImg(currImg + 1); }}>
-                    <ArrowForwardIosIcon style={{ fontSize: 50 }} /></div>
+                <div className='right' onClick={() => setCurrImg((currImg + 1) % images.length)}>
+                    <ArrowForwardIosIcon style={{ fontSize: 50 }} />
+                </div>
             </div>
         </div>
 

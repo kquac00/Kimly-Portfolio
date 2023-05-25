@@ -4,11 +4,28 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 
 const Hobby = () => {
+    const handleResize = () => {
+        const width = window.innerWidth;
+        const numCols = width <= 600 ? 2 : 3;
+        const imageList = document.querySelector('.hobby-image-list');
+        if (imageList) {
+            imageList.style.gridTemplateColumns = `repeat(${numCols}, 1fr)`;
+        }
+    };
+
+    React.useEffect(() => {
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
+
     return (
-        <>
-            <h1 style={{ color: 'skyblue', fontFamily: 'sans-serif', fontSize: '60px', textAlign: "center" }}>Favorite Hobbies</h1>
+        <div styling>
+            <h1 style={{ color: 'skyblue', fontFamily: 'sans-serif', fontSize: '60px', textAlign: 'center' }}>Favorite Hobbies</h1>
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '80vh' }}>
-                <ImageList sx={{ width: 500, height: 450 }} cols={3} rowHeight={164}>
+                <ImageList className="hobby-image-list" sx={{ width: 900, height: 600 }} rowHeight={164}>
                     {itemData.map((item) => (
                         <ImageListItem key={item.img}>
                             <img
@@ -26,11 +43,11 @@ const Hobby = () => {
                     ))}
                 </ImageList>
             </div>
-        </>
+        </div>
     );
-}
+};
 
-export default Hobby
+export default Hobby;
 
 const itemData = [
     {

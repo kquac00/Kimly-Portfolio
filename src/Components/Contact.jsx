@@ -38,7 +38,7 @@ const Contact = () => {
   return (
     <div className="marginTB">
       <StyledContactForm>
-        <p>Give me an opportunity to be part of something great.</p>
+        <p>Let's connect and start something great.</p>
         <form ref={form} onSubmit={sendEmail}>
           <label>Name</label>
           <input type="text" name="user_name" />

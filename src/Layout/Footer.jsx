@@ -10,7 +10,7 @@ const Footer = () => {
 
             <section id="footer" className="bg-dark text-light">
                 <div className="container">
-                    <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 mt-5">
+                    <footer className="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 pl-20">
                         <div className="col mb-3">
                             <h5>Portfolio</h5>
                             <ul className="nav flex-column">

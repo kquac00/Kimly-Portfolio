@@ -1,6 +1,7 @@
 .main {
   margin-top: -50px;
 }
+/* career change content */
 .text {
   color: white;
   display: flex;
@@ -8,15 +9,115 @@
   justify-content: center;
   padding: 20px;
   font-family: sans-serif;
+  font-size: 1.2rem;
+  flex-wrap: wrap;
 }
 
+@media screen and (max-width: 600px) {
+  .text {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    font-family: sans-serif;
+    font-size: 0.8rem;
+  }
+}
+
+/* Technologies and chips */
+.chip-stack {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
+  flex-wrap: wrap;
+}
+.chip-stack .MuiChip-root {
+  background-color: #fff;
+  color: #333;
+}
+
+.chip-container {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.chip {
+  font-size: 2px;
+  padding: 8px 8px;
+}
+.tech-display {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .chip-stack .MuiChip-root {
+    font-size: 10px;
+    padding: 2px 2px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 5px;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* display project cards */
+.title {
+  font-size: 5rem;
+  color: white;
+  text-shadow: 0 0 5px black;
+  margin-bottom: 2rem;
+  text-align: center;
+}
 .projectCard {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
+/* vision and certification */
+.visionMain {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 1000px;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 935px) {
+  .visionMain {
+    padding: 20px;
+    max-width: 100%;
+    width: 600px;
+    font-size: 15px;
+    margin: 20px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .visionMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 10px;
+    max-width: 100%;
+    width: 500px;
+    font-size: 0.8rem;
+    margin: 0;
+    padding: 20px;
+  }
+}
+
+/* additional features */
 .wrapper {
   height: 100vh;
   overflow: hidden;
@@ -40,30 +141,26 @@ header {
   width: 100%;
   object-fit: cover;
   z-index: -1;
+
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.title {
-  font-size: 5rem;
-  color: white;
-  text-shadow: 0 0 5px black;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-
-.chip-stack {
-  margin-top: 2rem;
+.body-text {
+  color: #fff;
+  font-family: Roboto;
+  padding: 20px;
+  font-size: 4em;
+  font-weight: bold;
   display: flex;
   justify-content: center;
-  font-weight: bold;
-  flex-wrap: wrap;
 }
 
-.chip-stack .MuiChip-root {
-  background-color: #fff;
-  color: #333;
-}
-
-.chip-container {
-  justify-content: center;
-  flex-wrap: wrap;
+.cool-text {
+  background: url(https://media1.giphy.com/media/xUPGcw99Tl8SCEDGKI/giphy.gif?cid=3640f6095c7449df6342455855917891);
+  background-size: cover;
+  background-position: center;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 60px;
 }

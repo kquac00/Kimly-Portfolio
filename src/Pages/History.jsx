@@ -16,7 +16,7 @@ const History = () => {
             <div>
                 <Navigation />
             </div>
-            <h3>The countries I lived and grew up in</h3>
+            <h3 style={{ color: "blue", fontFamily: "cursive" }}>The countries I lived and grew up in</h3>
             <div className='cards'>
                 <div>
                     <Card sx={{ maxWidth: 400 }}>
