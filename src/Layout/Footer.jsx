@@ -32,7 +32,7 @@ const Footer = () => {
                             <ul className="nav flex-column">
                                 <li className="nav-item mb-2"><a href='https://glittering-bavarois-1598d8.netlify.app/' target='_blank' rel="noopener noreferrer" >Etikit</a></li>
                                 <li className="nav-item mb-2"><a href='https://statuesque-swan-894988.netlify.app/' target='_blank' rel="noopener noreferrer">E-Commerce</a></li>
-                                <li className="nav-item mb-2"><a href="/">Portfolio</a></li>
+                                <li className="nav-item mb-2"><a href="https://splendid-manatee-aa0ee4.netlify.app/">Dental Website</a></li>
                             </ul>
                         </div>
                     </footer>

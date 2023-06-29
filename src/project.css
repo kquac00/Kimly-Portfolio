@@ -12,6 +12,10 @@
   font-size: 1.2rem;
   flex-wrap: wrap;
 }
+.textC {
+  text-align: center;
+  color: green;
+}
 
 @media screen and (max-width: 600px) {
   .text {
